@@ -98,8 +98,8 @@ class Stack(object):
             >>> s.length()
             0
         """
-        for item in self._list:
-            del item 
+        # this will slice the list starting at the 0 index to the finish
+        del self._list[:]
 
         return self._list.empty()
 
