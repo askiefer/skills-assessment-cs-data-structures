@@ -1,0 +1,56 @@
+Discussion Questions 
+
+Runtime 
+1. When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches the size of infinity. What is the workload of a function that takes in a list of integers and returns a new list of the even integers?
+
+The workload of this function is the length of the list. The runtime of the function would depend on the number of operations in the function (two included below). I believe the list comprehension function would be shorter, as though there is still a for and an if statement, the append statement does not need to be included.
+
+list = [4, 7, 3, 9, 1001 ...]
+evens = []
+def find_evens(list):
+	for num in list: 
+		if num % 2 == 0:
+			evens.append(num)
+	return evens 
+
+evens = [x for x in list if x % 2 == 0]
+
+2. Ordering the following runtimes: 
+
+	1. O(1)
+	2. O(n)
+	3. O(log n)
+	4. O(n log n)
+	5. O(2^n)
+	6. O(n^2)
+
+Stacks and Queues 
+1. Appropriate data structures: 
+	1. Stack
+	2. Queue
+	3. Stack 
+2. A queue would be an appropriate data structure for printing documents and call
+waiting.
+3. A stack is used with any pile of items (books, for example), back button in browsers 
+or undo button. 
+
+Linked Lists 
+1. One node is represented by the data and pointer together ("Apple" and next is one node). The data for each node is the string associated with it ("Apple", "Berry", "Cherry"). The head is 
+attached to the first node (in this case, the apple node). A linked list must have a pointer 
+to its first node (the head). The pointer is the arrow from the head to the node. 
+The tail is attached to the last node (the cherry node), although the tail is not represented in the diagram. Cherry does not have a sequential node, though it does have a pointer (the arrow) 
+which points to None. 
+
+2. A singly linked list contains elements (nodes) with data and a link to the next element, while a 
+doubly linked list contains elements (nodes) with both links to the next element and the previous 
+element (the pointer, or arrows, go in both directions.)
+
+3. It is faster to append to a linked list if we keep the tail as an attribute as we don't have to 
+traverse through all of the list's elements to get to the last element and add an item to it; we only have to add an item to the element with the tail attribute, as we know that that element is the last one.
+
+Trees
+1. A BFS algorithm to find burrito would start off at food, add its children (Italian, Indian, Mexican), pop Italian (not it), add its children to the end, pop the next item from the front (Indian) (not it), add its children to the end, pop the next item (Mexican), add its children, pop the next item in the list (lasagna), add its children (None), pop pizza, add its children, pop tikka masala, add its children (none), pop saag, add its children (none), pop burrito - found it.
+2. A DFS algorithm to find Chicago-style would search the children of each node before the next sibling of the node. The search would start at food, then add its children (Italian, Indian, and Mexican), pop Mexican, add its children (burrito, tacos, enchiladas), pop them (they have no children), move to the next element (Indian), pop it and add its children (tikka masala and sang), pop them, move to Italian, pop it and add its children (lasagna and pizza). Not pizza so add it's children (Sicilian, NY, Chicago, thin), pop Sicilian and NY (neither have children to add), move to Chicago, pop Chicago, where the traversing ends. 
+3. A binary search tree is a type of tree where the key in any node is larger than the keys in all nodes in that node's left subtree and smaller than the keys in all nodes in that node's right subtree. Other trees utilize a heirarchical structure but their nodes (key-value pairs) do not necessarily follow this rule for arrangement. 
+
+
